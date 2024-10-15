@@ -11,8 +11,8 @@ import os
 #load_dotenv("C:/Users/ferna/OneDrive/Escritorio/Ferna/Programación/Pagina Objetos perdidos/variables.env")
 #user: str = os.environ.get("USER")
 #password: str = os.environ.get("PASSWORD")
-user: str = st.secrets["USER"])
-password: str = st.secrets["PASSWORD"])
+user: str = st.secrets["USER"]
+password: str = st.secrets["PASSWORD"]
 
 st.dialog("hola")
 
