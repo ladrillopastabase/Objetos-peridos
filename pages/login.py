@@ -7,10 +7,12 @@ import pandas as pd
 import streamlit as st
 import os
 
-from dotenv import load_dotenv
-load_dotenv("C:/Users/ferna/OneDrive/Escritorio/Ferna/Programación/Pagina Objetos perdidos/variables.env")
-user: str = os.environ.get("USER")
-password: str = os.environ.get("PASSWORD")
+#from dotenv import load_dotenv
+#load_dotenv("C:/Users/ferna/OneDrive/Escritorio/Ferna/Programación/Pagina Objetos perdidos/variables.env")
+#user: str = os.environ.get("USER")
+#password: str = os.environ.get("PASSWORD")
+user: str = st.secrets["USER"])
+password: str = st.secrets["PASSWORD"])
 
 st.dialog("hola")
 
