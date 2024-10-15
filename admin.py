@@ -9,12 +9,16 @@ import streamlit as st
 import os
 from supabase import create_client, Client
 
-from dotenv import load_dotenv
-load_dotenv("C:/Users/ferna/OneDrive/Escritorio/Ferna/Programación/Pagina Objetos perdidos/variables.env")
+#from dotenv import load_dotenv
+#load_dotenv("C:/Users/ferna/OneDrive/Escritorio/Ferna/Programación/Pagina Objetos perdidos/variables.env")
+#imagebbkey: str = os.environ.get("IMAGEBB_KEY")
+imagebbkey: str = st.secrets["IMAGEBB_KEY"])
 print("Pagina inicializada correctamente!")
 
-url: str = os.environ.get("SUPABASE_URL")
-key: str = os.environ.get("SUPABASE_KEY")
+#url: str = os.environ.get("SUPABASE_URL")
+#key: str = os.environ.get("SUPABASE_KEY")
+url: str = st.secrets["SUPABASE_URL"])
+key: str = st.secrets["SUPABASE_KEY"])
 #supabase: Client = create_client(url, key)
 #print("Conexión base de datos realizada correctamente!")
 
