@@ -36,7 +36,7 @@ st.write(
 )
 
 # resutados en existencia
-st.header("Objetos en existencia")
+#st.header("Objetos en existencia")
 
 #realiza query sobre los objetos
 raw_data = supabase.table("objetos").select("*").execute()
@@ -51,7 +51,7 @@ edited_df = result_df[["item_category"]].copy()
 
 print(edited_df)
 
-st.dataframe(result_df, use_container_width=True, hide_index=True)
+#st.dataframe(result_df, use_container_width=True, hide_index=True)
 
 
 st.header("Objetos en existencia")
