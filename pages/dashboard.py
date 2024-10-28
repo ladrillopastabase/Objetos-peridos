@@ -11,23 +11,26 @@ import requests
 import base64
 from supabase import create_client, Client
 
-from dotenv import load_dotenv
-#Inicializacion de variables
-load_dotenv("C:/Users/ferna/OneDrive/Escritorio/Ferna/Programación/Pagina Objetos perdidos/variables.env")
-
-#imagebb
-imagebbkey: str = os.environ.get("IMAGEBB_KEY")
+#from dotenv import load_dotenv
+#load_dotenv("C:/Users/ferna/OneDrive/Escritorio/Ferna/Programación/Pagina Objetos perdidos/variables.env")
+#imagebbkey: str = os.environ.get("IMAGEBB_KEY")
+imagebbkey: str = st.secrets["IMAGEBB_KEY"]
 print("Pagina inicializada correctamente!")
 
-#supabade
-url: str = os.environ.get("SUPABASE_URL")
-key: str = os.environ.get("SUPABASE_KEY")
+#url: str = os.environ.get("SUPABASE_URL")
+#key: str = os.environ.get("SUPABASE_KEY")
+url: str = st.secrets["SUPABASE_URL"]
+key: str = st.secrets["SUPABASE_KEY"]
+
 supabase: Client = create_client(url, key)
 print("Conexión base de datos realizada correctamente!")
 
 #Inicio de sesión
-user: str = os.environ.get("USER")
-password: str = os.environ.get("PASSWORD")
+#user: str = os.environ.get("USER")
+#password: str = os.environ.get("PASSWORD")
+user: str = st.secrets["USER"]
+password: str = st.secrets["PASSWORD"]
+
 
 #Funcion para cargar imagenes a imagebb
 def upload_image_to_imgbb(api_key, image):
